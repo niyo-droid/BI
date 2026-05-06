@@ -9,11 +9,16 @@
     :root {
       --green: #1f5c46;
       --green-dark: #174836;
+      --green-soft: #86bc25;
       --text: #111111;
       --muted: #5f6368;
       --light-gray: #f5f5f5;
       --selected: #3f4348;
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --skin: #f2c6a0;
+      --skin-2: #e9b98d;
+      --hair: #163d30;
+      --coat: #ffffff;
     }
 
     * {
@@ -42,12 +47,12 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 28px 24px 60px;
+      padding: 54px 24px 60px;
     }
 
     .bi-logo {
       position: absolute;
-      top: 4px;
+      top: 20px;
       left: 24px;
       color: var(--green);
       font-size: 44px;
@@ -187,12 +192,11 @@
       padding: 12px;
     }
 
-    .hero-image {
+    .hero-svg {
       width: 100%;
       max-width: 390px;
       height: auto;
       display: block;
-      object-fit: contain;
     }
 
     .content-sections {
@@ -212,7 +216,7 @@
 
     .card-content {
       display: grid;
-      grid-template-columns: 1fr 72px;
+      grid-template-columns: 1fr 78px;
       gap: 16px;
       align-items: center;
     }
@@ -230,12 +234,11 @@
     }
 
     .card-person {
-      width: 72px;
-      height: 72px;
-      object-fit: contain;
+      width: 78px;
+      height: 78px;
       display: block;
-      align-self: start;
       justify-self: end;
+      align-self: center;
     }
 
     .ot-modal {
@@ -341,11 +344,12 @@
 
     @media (max-width: 560px) {
       .page {
-        padding: 20px 16px 48px;
+        padding: 64px 16px 48px;
       }
 
       .bi-logo {
         left: 16px;
+        top: 22px;
         font-size: 34px;
         padding: 8px 13px;
       }
@@ -369,12 +373,12 @@
       }
 
       .card-content {
-        grid-template-columns: 1fr 58px;
+        grid-template-columns: 1fr 62px;
       }
 
       .card-person {
-        width: 58px;
-        height: 58px;
+        width: 62px;
+        height: 62px;
       }
 
       .ot-modal-content {
@@ -413,12 +417,32 @@
         </div>
 
         <div class="hero-graphic">
-          <div class="hero-image-wrap">
-            <img
-              src="images/hero-person-premium.png"
-              alt="Healthcare team illustration"
-              class="hero-image"
-            />
+          <div class="hero-image-wrap" aria-hidden="true">
+            <svg class="hero-svg" viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <ellipse cx="180" cy="392" rx="92" ry="16" fill="rgba(0,0,0,0.08)"/>
+                <circle cx="148" cy="70" r="34" fill="#E7B891"/>
+                <path d="M115 69c6-30 27-45 50-45 27 0 48 18 51 47-15-8-33-12-51-12-18 0-36 4-50 10Z" fill="#173f31"/>
+                <path d="M133 110c-2 14 8 26 22 26h20c13 0 23-12 21-26l-6-40h-51l-6 40Z" fill="#E7B891"/>
+                <rect x="130" y="134" width="70" height="26" rx="12" fill="#f5d1b3"/>
+                <path d="M108 185c0-26 21-47 47-47h20c26 0 47 21 47 47v96H108v-96Z" fill="#ffffff"/>
+                <path d="M147 153h35l18 34-20 26h-12l-20-26 19-34Z" fill="#86bc25"/>
+                <path d="M109 187c-24 8-38 31-38 57v69h42l10-90-14-36Z" fill="#1f5c46"/>
+                <path d="M221 187c24 8 38 31 38 57v69h-42l-10-90 14-36Z" fill="#1f5c46"/>
+                <rect x="122" y="176" width="86" height="124" rx="22" fill="#ffffff" stroke="#dfe6e2" stroke-width="3"/>
+                <path d="M151 177h29v20c0 8-6 14-14 14h-1c-8 0-14-6-14-14v-20Z" fill="#86bc25"/>
+                <rect x="143" y="215" width="45" height="8" rx="4" fill="#dfe6e2"/>
+                <rect x="143" y="231" width="60" height="8" rx="4" fill="#dfe6e2"/>
+                <rect x="143" y="247" width="54" height="8" rx="4" fill="#dfe6e2"/>
+                <path d="M131 294l-12 85h27l10-70-25-15Z" fill="#ffffff"/>
+                <path d="M199 294l12 85h-27l-10-70 25-15Z" fill="#ffffff"/>
+                <rect x="116" y="375" width="38" height="12" rx="6" fill="#173f31"/>
+                <rect x="185" y="375" width="38" height="12" rx="6" fill="#173f31"/>
+                <circle cx="273" cy="100" r="18" fill="#86bc25" opacity="0.16"/>
+                <circle cx="290" cy="142" r="9" fill="#1f5c46" opacity="0.14"/>
+                <circle cx="90" cy="118" r="12" fill="#86bc25" opacity="0.12"/>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
@@ -434,11 +458,12 @@
               scientific excellence, and improving lives through innovation.
             </p>
           </div>
-          <img
-            src="images/about-person-cute.png"
-            alt="About us person illustration"
-            class="card-person"
-          />
+          <svg class="card-person" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="20" r="12" fill="#F2C6A0"/>
+            <path d="M27 20c2-10 10-16 18-16 10 0 17 7 18 17-6-4-12-6-18-6-6 0-12 1-18 5Z" fill="#173f31"/>
+            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" fill="#86bc25"/>
+            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" stroke="#173f31" stroke-opacity="0.06"/>
+          </svg>
         </div>
       </div>
 
@@ -451,11 +476,12 @@
               designed to bring meaningful healthcare advancements to market.
             </p>
           </div>
-          <img
-            src="images/projects-person-cute.png"
-            alt="Projects person illustration"
-            class="card-person"
-          />
+          <svg class="card-person" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="20" r="12" fill="#EAB792"/>
+            <path d="M27 21c3-11 11-17 18-17 10 0 18 7 19 18-5-4-12-6-18-6-7 0-13 2-19 5Z" fill="#1f5c46"/>
+            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" fill="#43b02a"/>
+            <circle cx="52" cy="18" r="2" fill="#ffffff" opacity="0.4"/>
+          </svg>
         </div>
       </div>
 
@@ -468,11 +494,11 @@
               development lifecycle with quality and compliance at the center.
             </p>
           </div>
-          <img
-            src="images/services-person-cute.png"
-            alt="Services person illustration"
-            class="card-person"
-          />
+          <svg class="card-person" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="20" r="12" fill="#F1C49C"/>
+            <path d="M27 20c2-10 10-16 18-16 10 0 17 7 18 17-6-4-12-6-18-6-7 0-13 2-18 5Z" fill="#174836"/>
+            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" fill="#2c5234"/>
+          </svg>
         </div>
       </div>
     </section>
