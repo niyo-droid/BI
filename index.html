@@ -53,6 +53,14 @@
       font-size: 44px;
       font-weight: 700;
       letter-spacing: -0.03em;
+      line-height: 1;
+      padding: 10px 16px;
+      border: 2px solid var(--green);
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow:
+        0 0 0 6px rgba(31, 92, 70, 0.08),
+        0 8px 24px rgba(31, 92, 70, 0.12);
     }
 
     .top-nav-wrap {
@@ -122,7 +130,6 @@
     }
 
     .headline {
-      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
       font-size: clamp(44px, 7vw, 82px);
       line-height: 1.02;
       font-weight: 700;
@@ -170,98 +177,22 @@
       align-items: center;
     }
 
-    .ecosystem-card {
-      position: relative;
+    .hero-image-wrap {
       width: 100%;
-      max-width: 420px;
-      height: 420px;
-      background: linear-gradient(180deg, #f8fbf9 0%, #ffffff 100%);
-      border: 1px solid #e7ece8;
-      border-radius: 28px;
-      box-shadow: 0 18px 45px rgba(31, 92, 70, 0.10);
-    }
-
-    .ecosystem-line {
-      position: absolute;
-      background: #d9e5de;
-      z-index: 1;
-    }
-
-    .line-vertical {
-      width: 2px;
-      height: 220px;
-      top: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .line-horizontal {
-      width: 220px;
-      height: 2px;
-      top: 50%;
-      left: 100px;
-      transform: translateY(-50%);
-    }
-
-    .eco-node,
-    .eco-center {
-      position: absolute;
-      border-radius: 999px;
+      max-width: 430px;
+      min-height: 420px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      z-index: 2;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-    }
-
-    .eco-center {
-      top: 50%;
-      left: 50%;
-      width: 110px;
-      height: 110px;
-      transform: translate(-50%, -50%);
-      background: var(--green);
-      color: #ffffff;
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-
-    .eco-node {
-      width: 112px;
-      height: 112px;
-      background: #ffffff;
-      border: 1px solid #dde4df;
-      color: var(--green-dark);
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 1.2;
       padding: 12px;
     }
 
-    .eco-top {
-      top: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .eco-right {
-      top: 50%;
-      right: 24px;
-      transform: translateY(-50%);
-    }
-
-    .eco-bottom {
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .eco-left {
-      top: 50%;
-      left: 24px;
-      transform: translateY(-50%);
+    .hero-image {
+      width: 100%;
+      max-width: 390px;
+      height: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .content-sections {
@@ -275,8 +206,15 @@
       background: #ffffff;
       border: 1px solid #ececec;
       border-radius: 18px;
-      padding: 26px;
+      padding: 24px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-content {
+      display: grid;
+      grid-template-columns: 1fr 72px;
+      gap: 16px;
+      align-items: center;
     }
 
     .card h2 {
@@ -289,6 +227,15 @@
       color: #555555;
       line-height: 1.65;
       font-size: 15px;
+    }
+
+    .card-person {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      display: block;
+      align-self: start;
+      justify-self: end;
     }
 
     .ot-modal {
@@ -400,6 +347,7 @@
       .bi-logo {
         left: 16px;
         font-size: 34px;
+        padding: 8px 13px;
       }
 
       .top-nav-wrap {
@@ -420,30 +368,13 @@
         text-align: center;
       }
 
-      .ecosystem-card {
-        height: 340px;
+      .card-content {
+        grid-template-columns: 1fr 58px;
       }
 
-      .eco-center {
-        width: 90px;
-        height: 90px;
-        font-size: 24px;
-      }
-
-      .eco-node {
-        width: 92px;
-        height: 92px;
-        font-size: 13px;
-      }
-
-      .line-vertical {
-        height: 170px;
-        top: 85px;
-      }
-
-      .line-horizontal {
-        width: 170px;
-        left: 85px;
+      .card-person {
+        width: 58px;
+        height: 58px;
       }
 
       .ot-modal-content {
@@ -482,15 +413,12 @@
         </div>
 
         <div class="hero-graphic">
-          <div class="ecosystem-card">
-            <div class="ecosystem-line line-vertical"></div>
-            <div class="ecosystem-line line-horizontal"></div>
-
-            <div class="eco-center">BI</div>
-            <div class="eco-node eco-top">Research</div>
-            <div class="eco-node eco-right">Clinical</div>
-            <div class="eco-node eco-bottom">Operations</div>
-            <div class="eco-node eco-left">Quality</div>
+          <div class="hero-image-wrap">
+            <img
+              src="images/hero-person-premium.png"
+              alt="Healthcare team illustration"
+              class="hero-image"
+            />
           </div>
         </div>
       </div>
@@ -498,27 +426,54 @@
 
     <section class="content-sections">
       <div class="card" id="about">
-        <h2>About Us</h2>
-        <p>
-          We are a health-focused organization committed to responsible drug development,
-          scientific excellence, and improving lives through innovation.
-        </p>
+        <div class="card-content">
+          <div>
+            <h2>About Us</h2>
+            <p>
+              We are a health-focused organization committed to responsible drug development,
+              scientific excellence, and improving lives through innovation.
+            </p>
+          </div>
+          <img
+            src="images/about-person-cute.png"
+            alt="About us person illustration"
+            class="card-person"
+          />
+        </div>
       </div>
 
       <div class="card" id="projects">
-        <h2>Projects</h2>
-        <p>
-          Our projects span research, formulation, clinical support, and delivery models
-          designed to bring meaningful healthcare advancements to market.
-        </p>
+        <div class="card-content">
+          <div>
+            <h2>Projects</h2>
+            <p>
+              Our projects span research, formulation, clinical support, and delivery models
+              designed to bring meaningful healthcare advancements to market.
+            </p>
+          </div>
+          <img
+            src="images/projects-person-cute.png"
+            alt="Projects person illustration"
+            class="card-person"
+          />
+        </div>
       </div>
 
       <div class="card" id="services">
-        <h2>Services</h2>
-        <p>
-          We provide strategic, scientific, and operational services across the drug
-          development lifecycle with quality and compliance at the center.
-        </p>
+        <div class="card-content">
+          <div>
+            <h2>Services</h2>
+            <p>
+              We provide strategic, scientific, and operational services across the drug
+              development lifecycle with quality and compliance at the center.
+            </p>
+          </div>
+          <img
+            src="images/services-person-cute.png"
+            alt="Services person illustration"
+            class="card-person"
+          />
+        </div>
       </div>
     </section>
   </div>
@@ -545,6 +500,7 @@
   </div>
 
   <script>
+    // Code Generated by Sidekick is for learning and experimentation purposes only.
     const registerBtn = document.getElementById('registerBtn');
     const modal = document.getElementById('otModal');
     const closeModalBtn = document.getElementById('closeModalBtn');
