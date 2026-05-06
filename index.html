@@ -47,10 +47,10 @@
 
     .bi-logo {
       position: absolute;
-      top: 6px;
+      top: 4px;
       left: 24px;
       color: var(--green);
-      font-size: 30px;
+      font-size: 44px;
       font-weight: 700;
       letter-spacing: -0.03em;
     }
@@ -94,12 +94,22 @@
     }
 
     .hero {
+      min-height: 52vh;
+      padding: 20px 0 40px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-copy {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      min-height: 52vh;
-      padding: 20px 0 40px;
     }
 
     .eyebrow {
@@ -152,6 +162,106 @@
     .register-btn:hover {
       opacity: 0.92;
       transform: translateY(-1px);
+    }
+
+    .hero-graphic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ecosystem-card {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 420px;
+      background: linear-gradient(180deg, #f8fbf9 0%, #ffffff 100%);
+      border: 1px solid #e7ece8;
+      border-radius: 28px;
+      box-shadow: 0 18px 45px rgba(31, 92, 70, 0.10);
+    }
+
+    .ecosystem-line {
+      position: absolute;
+      background: #d9e5de;
+      z-index: 1;
+    }
+
+    .line-vertical {
+      width: 2px;
+      height: 220px;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .line-horizontal {
+      width: 220px;
+      height: 2px;
+      top: 50%;
+      left: 100px;
+      transform: translateY(-50%);
+    }
+
+    .eco-node,
+    .eco-center {
+      position: absolute;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 2;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .eco-center {
+      top: 50%;
+      left: 50%;
+      width: 110px;
+      height: 110px;
+      transform: translate(-50%, -50%);
+      background: var(--green);
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .eco-node {
+      width: 112px;
+      height: 112px;
+      background: #ffffff;
+      border: 1px solid #dde4df;
+      color: var(--green-dark);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 12px;
+    }
+
+    .eco-top {
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .eco-right {
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+    }
+
+    .eco-bottom {
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .eco-left {
+      top: 50%;
+      left: 24px;
+      transform: translateY(-50%);
     }
 
     .content-sections {
@@ -258,6 +368,11 @@
     }
 
     @media (max-width: 900px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
       .content-sections {
         grid-template-columns: 1fr;
       }
@@ -271,6 +386,10 @@
         justify-content: center;
         flex-wrap: wrap;
       }
+
+      .hero-graphic {
+        justify-content: flex-start;
+      }
     }
 
     @media (max-width: 560px) {
@@ -280,7 +399,7 @@
 
       .bi-logo {
         left: 16px;
-        font-size: 26px;
+        font-size: 34px;
       }
 
       .top-nav-wrap {
@@ -299,6 +418,32 @@
       .register-btn {
         width: 100%;
         text-align: center;
+      }
+
+      .ecosystem-card {
+        height: 340px;
+      }
+
+      .eco-center {
+        width: 90px;
+        height: 90px;
+        font-size: 24px;
+      }
+
+      .eco-node {
+        width: 92px;
+        height: 92px;
+        font-size: 13px;
+      }
+
+      .line-vertical {
+        height: 170px;
+        top: 85px;
+      }
+
+      .line-horizontal {
+        width: 170px;
+        left: 85px;
       }
 
       .ot-modal-content {
@@ -326,12 +471,29 @@
     </div>
 
     <section class="hero">
-      <div class="eyebrow">Health & Drug Innovation</div>
-      <h1 class="headline">Advancing Medicine Through <span class="accent">Science</span></h1>
-      <p class="subtext">
-        Developing trusted healthcare solutions with a focus on precision, quality, and patient impact.
-      </p>
-      <button type="button" class="register-btn" id="registerBtn">Register</button>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow">Health & Drug Innovation</div>
+          <h1 class="headline">Advancing Medicine Through <span class="accent">Science</span></h1>
+          <p class="subtext">
+            Developing trusted healthcare solutions with a focus on precision, quality, and patient impact.
+          </p>
+          <button type="button" class="register-btn" id="registerBtn">Register</button>
+        </div>
+
+        <div class="hero-graphic">
+          <div class="ecosystem-card">
+            <div class="ecosystem-line line-vertical"></div>
+            <div class="ecosystem-line line-horizontal"></div>
+
+            <div class="eco-center">BI</div>
+            <div class="eco-node eco-top">Research</div>
+            <div class="eco-node eco-right">Clinical</div>
+            <div class="eco-node eco-bottom">Operations</div>
+            <div class="eco-node eco-left">Quality</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="content-sections">
@@ -371,7 +533,6 @@
       </div>
 
       <div class="ot-modal-body">
-        <!-- OneTrust Web Form start -->
         <div class="ot-form-wrapper">
           <iframe
             src="https://hbucv-privacy.my.onetrust.com/hosted-webform/consent/920f4633-570d-4168-84fb-38be47679c8f/d6c8aa93-9df6-43c7-9d40-963d08d76382"
@@ -379,7 +540,6 @@
             loading="lazy">
           </iframe>
         </div>
-        <!-- OneTrust Web Form end -->
       </div>
     </div>
   </div>
