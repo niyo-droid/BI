@@ -16,9 +16,8 @@
       --selected: #3f4348;
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       --skin: #f2c6a0;
-      --skin-2: #e9b98d;
-      --hair: #163d30;
-      --coat: #ffffff;
+      --skin-2: #e7b891;
+      --hair: #173f31;
     }
 
     * {
@@ -47,12 +46,12 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 54px 24px 60px;
+      padding: 92px 24px 60px;
     }
 
     .bi-logo {
       position: absolute;
-      top: 20px;
+      top: 36px;
       left: 24px;
       color: var(--green);
       font-size: 44px;
@@ -182,19 +181,23 @@
       align-items: center;
     }
 
-    .hero-image-wrap {
+    .hero-graphic-card {
       width: 100%;
       max-width: 430px;
-      min-height: 420px;
+      min-height: 430px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px;
+      background: linear-gradient(180deg, #f8fbf9 0%, #ffffff 100%);
+      border: 1px solid #e7ece8;
+      border-radius: 28px;
+      box-shadow: 0 18px 45px rgba(31, 92, 70, 0.10);
+      padding: 20px;
     }
 
-    .hero-svg {
+    .hero-person-svg {
       width: 100%;
-      max-width: 390px;
+      max-width: 340px;
       height: auto;
       display: block;
     }
@@ -216,7 +219,7 @@
 
     .card-content {
       display: grid;
-      grid-template-columns: 1fr 78px;
+      grid-template-columns: 1fr 82px;
       gap: 16px;
       align-items: center;
     }
@@ -233,9 +236,9 @@
       font-size: 15px;
     }
 
-    .card-person {
-      width: 78px;
-      height: 78px;
+    .card-person-svg {
+      width: 82px;
+      height: 82px;
       display: block;
       justify-self: end;
       align-self: center;
@@ -344,12 +347,12 @@
 
     @media (max-width: 560px) {
       .page {
-        padding: 64px 16px 48px;
+        padding: 96px 16px 48px;
       }
 
       .bi-logo {
         left: 16px;
-        top: 22px;
+        top: 40px;
         font-size: 34px;
         padding: 8px 13px;
       }
@@ -373,12 +376,12 @@
       }
 
       .card-content {
-        grid-template-columns: 1fr 62px;
+        grid-template-columns: 1fr 64px;
       }
 
-      .card-person {
-        width: 62px;
-        height: 62px;
+      .card-person-svg {
+        width: 64px;
+        height: 64px;
       }
 
       .ot-modal-content {
@@ -417,31 +420,31 @@
         </div>
 
         <div class="hero-graphic">
-          <div class="hero-image-wrap" aria-hidden="true">
-            <svg class="hero-svg" viewBox="0 0 380 420" xmlns="http://www.w3.org/2000/svg">
-              <g>
-                <ellipse cx="180" cy="392" rx="92" ry="16" fill="rgba(0,0,0,0.08)"/>
-                <circle cx="148" cy="70" r="34" fill="#E7B891"/>
-                <path d="M115 69c6-30 27-45 50-45 27 0 48 18 51 47-15-8-33-12-51-12-18 0-36 4-50 10Z" fill="#173f31"/>
-                <path d="M133 110c-2 14 8 26 22 26h20c13 0 23-12 21-26l-6-40h-51l-6 40Z" fill="#E7B891"/>
-                <rect x="130" y="134" width="70" height="26" rx="12" fill="#f5d1b3"/>
-                <path d="M108 185c0-26 21-47 47-47h20c26 0 47 21 47 47v96H108v-96Z" fill="#ffffff"/>
-                <path d="M147 153h35l18 34-20 26h-12l-20-26 19-34Z" fill="#86bc25"/>
-                <path d="M109 187c-24 8-38 31-38 57v69h42l10-90-14-36Z" fill="#1f5c46"/>
-                <path d="M221 187c24 8 38 31 38 57v69h-42l-10-90 14-36Z" fill="#1f5c46"/>
-                <rect x="122" y="176" width="86" height="124" rx="22" fill="#ffffff" stroke="#dfe6e2" stroke-width="3"/>
-                <path d="M151 177h29v20c0 8-6 14-14 14h-1c-8 0-14-6-14-14v-20Z" fill="#86bc25"/>
-                <rect x="143" y="215" width="45" height="8" rx="4" fill="#dfe6e2"/>
-                <rect x="143" y="231" width="60" height="8" rx="4" fill="#dfe6e2"/>
-                <rect x="143" y="247" width="54" height="8" rx="4" fill="#dfe6e2"/>
-                <path d="M131 294l-12 85h27l10-70-25-15Z" fill="#ffffff"/>
-                <path d="M199 294l12 85h-27l-10-70 25-15Z" fill="#ffffff"/>
-                <rect x="116" y="375" width="38" height="12" rx="6" fill="#173f31"/>
-                <rect x="185" y="375" width="38" height="12" rx="6" fill="#173f31"/>
-                <circle cx="273" cy="100" r="18" fill="#86bc25" opacity="0.16"/>
-                <circle cx="290" cy="142" r="9" fill="#1f5c46" opacity="0.14"/>
-                <circle cx="90" cy="118" r="12" fill="#86bc25" opacity="0.12"/>
-              </g>
+          <div class="hero-graphic-card" aria-hidden="true">
+            <svg class="hero-person-svg" viewBox="0 0 340 360" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="170" cy="338" rx="78" ry="12" fill="rgba(0,0,0,0.08)"></ellipse>
+
+              <circle cx="168" cy="82" r="34" fill="#f2c6a0"></circle>
+              <path d="M133 80c6-29 26-46 51-46 28 0 48 18 52 48-15-8-34-12-52-12-18 0-37 3-51 10Z" fill="#173f31"></path>
+
+              <rect x="151" y="108" width="34" height="24" rx="12" fill="#efc29d"></rect>
+
+              <path d="M116 170c0-24 20-44 44-44h16c24 0 44 20 44 44v54H116v-54Z" fill="#ffffff"></path>
+              <path d="M153 126h22l18 30-18 26h-22l-18-26 18-30Z" fill="#86bc25"></path>
+              <rect x="129" y="159" width="78" height="100" rx="18" fill="#ffffff" stroke="#dfe6e2" stroke-width="3"></rect>
+
+              <path d="M116 172c-19 8-33 27-33 50v38h36l9-59-12-29Z" fill="#1f5c46"></path>
+              <path d="M220 172c19 8 33 27 33 50v38h-36l-9-59 12-29Z" fill="#1f5c46"></path>
+
+              <path d="M142 259l-12 58h25l10-48-23-10Z" fill="#ffffff"></path>
+              <path d="M194 259l12 58h-25l-10-48 23-10Z" fill="#ffffff"></path>
+
+              <rect x="127" y="314" width="34" height="10" rx="5" fill="#173f31"></rect>
+              <rect x="178" y="314" width="34" height="10" rx="5" fill="#173f31"></rect>
+
+              <circle cx="255" cy="96" r="18" fill="#86bc25" opacity="0.18"></circle>
+              <circle cx="274" cy="136" r="9" fill="#1f5c46" opacity="0.14"></circle>
+              <circle cx="89" cy="118" r="12" fill="#86bc25" opacity="0.14"></circle>
             </svg>
           </div>
         </div>
@@ -458,11 +461,10 @@
               scientific excellence, and improving lives through innovation.
             </p>
           </div>
-          <svg class="card-person" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="40" cy="20" r="12" fill="#F2C6A0"/>
-            <path d="M27 20c2-10 10-16 18-16 10 0 17 7 18 17-6-4-12-6-18-6-6 0-12 1-18 5Z" fill="#173f31"/>
-            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" fill="#86bc25"/>
-            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" stroke="#173f31" stroke-opacity="0.06"/>
+          <svg class="card-person-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="21" r="12" fill="#f2c6a0"></circle>
+            <path d="M27 21c2-10 10-16 18-16 10 0 17 7 18 17-6-4-12-6-18-6-6 0-12 2-18 5Z" fill="#173f31"></path>
+            <path d="M24 67c0-15 10-24 16-24s16 9 16 24" fill="#86bc25"></path>
           </svg>
         </div>
       </div>
@@ -476,11 +478,10 @@
               designed to bring meaningful healthcare advancements to market.
             </p>
           </div>
-          <svg class="card-person" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="40" cy="20" r="12" fill="#EAB792"/>
-            <path d="M27 21c3-11 11-17 18-17 10 0 18 7 19 18-5-4-12-6-18-6-7 0-13 2-19 5Z" fill="#1f5c46"/>
-            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" fill="#43b02a"/>
-            <circle cx="52" cy="18" r="2" fill="#ffffff" opacity="0.4"/>
+          <svg class="card-person-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="21" r="12" fill="#e7b891"></circle>
+            <path d="M27 21c3-11 11-17 18-17 10 0 18 7 19 18-6-4-12-6-19-6-6 0-12 2-18 5Z" fill="#1f5c46"></path>
+            <path d="M24 67c0-15 10-24 16-24s16 9 16 24" fill="#43b02a"></path>
           </svg>
         </div>
       </div>
@@ -494,10 +495,10 @@
               development lifecycle with quality and compliance at the center.
             </p>
           </div>
-          <svg class="card-person" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="40" cy="20" r="12" fill="#F1C49C"/>
-            <path d="M27 20c2-10 10-16 18-16 10 0 17 7 18 17-6-4-12-6-18-6-7 0-13 2-18 5Z" fill="#174836"/>
-            <path d="M25 66c0-14 9-24 15-24h0c6 0 15 10 15 24" fill="#2c5234"/>
+          <svg class="card-person-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="21" r="12" fill="#f0c39d"></circle>
+            <path d="M27 21c2-10 10-16 18-16 10 0 17 7 18 17-6-4-12-6-18-6-7 0-13 2-18 5Z" fill="#174836"></path>
+            <path d="M24 67c0-15 10-24 16-24s16 9 16 24" fill="#2c5234"></path>
           </svg>
         </div>
       </div>
